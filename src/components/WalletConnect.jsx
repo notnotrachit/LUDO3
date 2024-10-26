@@ -39,7 +39,8 @@ export function WalletConnection() {
             <TonConnectButton />
             {wallet && (
                 <span className='text-sm text-green-600 font-medium'>
-                    Connected: {wallet.account.address.slice(0, 6)}...{wallet.account.address.slice(-4)}
+                    Connected: {wallet.account.address.slice(0, 6)}...{wallet.account.address.slice(-4)}{' '}
+                    {/* {wallet.account.address} */}
                 </span>
             )}
         </div>

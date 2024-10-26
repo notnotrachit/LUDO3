@@ -1,15 +1,3 @@
-<h1  align="center">Online Multiplayer Ludo Game </h1>
-
-Ludo Online is a multiplayer web-based implementation of the classic board game Ludo, built using the MERN stack and integrated with SocketIO for real-time communication.
-
-<p align="center">
->> <a href="http://ec2-51-20-142-4.eu-north-1.compute.amazonaws.com:8080">Play online here</a> <<
-  </p>
-  
-<p align="center">
->> <a href="https://youtu.be/mGMnH9Nvsyw">Watch YouTube Video here</a> <<
-  </p>
-
 ## Architecture
 
 ![Interface](https://github.com/Wenszel/mern-ludo/blob/main/src/images/architecture.png?raw=true)
@@ -44,7 +32,6 @@ Other:
 -   Implemented E2E tests utilizing **Cypress**, addressing challenges related to [testing collaboration](https://docs.cypress.io/guides/references/trade-offs#Multiple-browsers-open-at-the-same-time) and canvas functionality in the application.
 
 -   Established a CI/CD pipeline using **CircleCI**, with pushing **Docker** container to **AWS ECR** and deploying to **AWS ECS**
-
 
 ## Installation
 

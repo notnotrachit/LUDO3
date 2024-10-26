@@ -28,7 +28,7 @@ function App() {
 
     return (
         <div className='min-h-screen bg-gradient-to-b from-blue-100 to-blue-200'>
-            <header className='bg-white shadow-md p-4 mb-8'>
+            <header className='bg-white shadow-md max-h-10 p-4 mb-8'>
                 <div className='container mx-auto flex justify-between items-center'>
                     <div className='flex items-center space-x-2'>
                         <Dices className='w-8 h-8 text-blue-600' />
