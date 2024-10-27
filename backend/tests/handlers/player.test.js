@@ -4,7 +4,7 @@ const { server } = require('../../server');
 const mongoose = require('mongoose');
 const CONNECTION_URI = require('../../credentials.js');
 
-const socketURL = 'http://localhost:8080';
+const socketURL = 'https://tonback.loophole.site/';
 const options = {
     transports: ['websocket'],
     'force new connection': true,

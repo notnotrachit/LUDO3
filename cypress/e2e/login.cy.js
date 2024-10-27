@@ -1,12 +1,12 @@
 describe('login', () => {
     it('should change color of input if the server name is invalid', () => {
-        cy.visit('http://localhost:3000');
+        cy.visit('https://tonfront.loophole.site/');
         cy.get('button:contains("Host")').click();
         cy.get('[placeholder="Server Name"]').should('have.css', 'border-color', 'rgb(255, 0, 0)');
     });
     
     it('should redirect user to game when filling inputs correctly', () => {
-        cy.visit('http://localhost:3000');
+        cy.visit('https://tonfront.loophole.site/');
         const uniqName = Date.now().toString();
         cy.get('[placeholder="Server Name"]').type(uniqName);
         cy.get('.PrivateSwitchBase-input').click();

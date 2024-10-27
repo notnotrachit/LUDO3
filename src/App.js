@@ -6,6 +6,9 @@ import Gameboard from './components/Gameboard/Gameboard';
 import LoginPage from './components/LoginPage/LoginPage';
 import { WalletConnection } from './components/WalletConnect';
 import { Dices } from 'lucide-react';
+import WebApp from '@twa-dev/sdk';
+
+WebApp.ready();
 
 export const PlayerDataContext = createContext();
 export const SocketContext = createContext();
@@ -15,7 +18,7 @@ function App() {
     const [playerSocket, setPlayerSocket] = useState();
     const [redirect, setRedirect] = useState();
     useEffect(() => {
-        const socket = io(`http://${window.location.hostname}:8080`, { withCredentials: true });
+        const socket = io(`https://tonback.loophole.site/`);
         socket.on('player:data', data => {
             data = JSON.parse(data);
             setPlayerData(data);

@@ -4,9 +4,9 @@ const socketManager = {
     io: null,
     initialize(server) {
         this.io = require('socket.io')(server, {
+            origins: '*:*',
             cors: {
-                origin: 'http://localhost:3000',
-                credentials: true,
+                origin: '*',
             },
             allowRequest: (req, callback) => {
                 const fakeRes = {
@@ -32,6 +32,7 @@ const socketManager = {
         if (!this.io) {
             throw new Error('Socket.io not initialized');
         }
+        console.log('Socket.io initialized');
         return this.io;
     },
 };

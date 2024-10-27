@@ -20,8 +20,7 @@ app.use(express.json());
 app.set('trust proxy', 1);
 app.use(
     cors({
-        origin: 'http://localhost:3000',
-        credentials: true,
+        origin: 'https://tonfront.loophole.site/',
     })
 );
 app.use(sessionMiddleware);

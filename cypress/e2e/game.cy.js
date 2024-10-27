@@ -1,10 +1,10 @@
 const io = require('socket.io-client');
-const socket = io.connect('http://localhost:8080', { withCredentials: true });
+const socket = io.connect('https://tonback.loophole.site/', { withCredentials: true });
 const uniqName = Date.now().toString();
 
 describe('game', () => {
     before(() => {
-        cy.visit('http://localhost:3000');
+        cy.visit('https://tonfront.loophole.site/');
         cy.get('[placeholder="Server Name"]').type(uniqName);
         cy.get('button:contains("Host")').click();
         const room = cy.contains(`${uniqName}`).should('exist');

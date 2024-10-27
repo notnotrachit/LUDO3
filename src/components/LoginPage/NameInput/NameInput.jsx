@@ -4,8 +4,15 @@ import useInput from '../../../hooks/useInput';
 import useKeyPress from '../../../hooks/useKeyPress';
 import styles from './NameInput.module.css';
 import { useTonWallet } from '@tonconnect/ui-react';
+import WebApp from '@twa-dev/sdk';
+
+WebApp.ready()
+
 
 const NameInput = ({ isRoomPrivate, roomId }) => {
+    console.log('NameInput');
+    console.log(WebApp.initDataUnsafe?.user?.username);
+    console.log("WebAppUser")
     const socket = useContext(SocketContext);
     const nickname = useInput('');
     const password = useInput('');
@@ -29,9 +36,9 @@ const NameInput = ({ isRoomPrivate, roomId }) => {
             <label htmlFor=''>
                 UserID
                 <input
-                    placeholder={wallet.account.address}
+                    placeholder={WebApp.initDataUnsafe?.user?.username}
                     disabled
-                    value={`${wallet.account.address.slice(4, 6)}...${wallet.account.address.slice(-4)}`}
+                    value={`${WebApp.initDataUnsafe?.user?.username}`}
                     type='text'
                     {...nickname}
                 />{' '}
